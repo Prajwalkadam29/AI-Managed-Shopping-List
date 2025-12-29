@@ -1,0 +1,22 @@
+# IDE
+.idea/
+.vscode/
+*.swp
+*.iml
+
+# Build
+target/
+dist/
+node_modules/
+bin/
+
+# Environment & Secrets
+.env
+application-local.properties
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Docker
+docker-compose.override.yml
