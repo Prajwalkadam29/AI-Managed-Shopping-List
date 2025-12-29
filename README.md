@@ -22,12 +22,18 @@ A production-grade, full-stack AI application that leverages the **Model Context
 ## 📸 Screenshots
 
 ### 1. The Dashboard (Midnight Theme)
-> *Placeholder: Insert your frontend screenshot here showing the Black UI and the "Live Inventory" panel.*
-> ![Frontend Dashboard](path/to/your/frontend-screenshot.png)
+> ![Frontend Dashboard](assets/shopping-list-ui-01.png)
+> ![Frontend Dashboard](assets/shopping-list-ui-02.png)
+> ![Frontend Dashboard](assets/shopping-list-ui-03.png)
+
+---
 
 ### 2. MCP Inspector Debugging
-> *Placeholder: Insert the screenshot of MCP Inspector showing the registered tools (addItem, listItems, etc.).*
-> ![MCP Inspector Tool View](path/to/your/mcp-inspector-screenshot.png)
+> ![MCP Inspector Tool View](assets/mcp-inspector-01.png)
+> ![MCP Inspector Tool View](assets/mcp-inspector-02.png)
+> ![MCP Inspector Tool View](assets/mcp-inspector-03.png)
+> ![MCP Inspector Tool View](assets/mcp-inspector-04.png)
+> ![MCP Inspector Tool View](assets/mcp-inspector-terminal.png)
 
 ---
 
@@ -51,21 +57,34 @@ A production-grade, full-stack AI application that leverages the **Model Context
 
 ### Option 1: Docker Deployment (Recommended)
 1. Clone the repository.
-2. Create a `.env` file in the root and add your key: `GROQ_API_KEY=your_key_here`.
+    ```bash
+    git clone <repo-url>
+    ```
+2. Create a `.env` file in the root.
+    ```bash
+    cp .env.example .env
+    ```
+Add your key: `GROQ_API_KEY=your_key_here` & postgres password: `POSTGRES_PASSWORD=your_secure_password`.
+
 3. Run:
    ```bash
    docker-compose up --build
    ```
-4. Access the UI at http://localhost:5173.
+4. Access the UI at http://localhost:5173 and backend at http://localhost:8080.
 
 ### Option 2: Local Development
-1. **Backend:** Update `application.properties` with your local Postgres credentials and run `AiManagedShoppingListApplication`.
-2. **Frontend:**
+1. Clone the repository.
+    ```bash
+    git clone <repo-url>
+    ```
+2. **Backend:** Update `application.properties` with your local Postgres credentials and run `AiManagedShoppingListApplication`.
+3. **Frontend:**
     ```bash
     cd shopping-list-mcp-client
     npm install
     npm run dev
     ```
+4. Access the UI at http://localhost:5173 and backend at http://localhost:8080.
 
 ---
 
